@@ -1,16 +1,27 @@
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>imponderabilium</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+function cb(response) {
+    document.getElementById('counter').innerText = response.value;
+}
+</script>
+<script async src="https://api.countapi.xyz/hit/imponderabilium/visits?callback=cb"></script>
+
+
 </head>
 
 <audio autoplay loop>
     <source src="reverse2.ogg" type="audio/ogg">
 </audio>
 
-<body>
-    <center><h1>there will be something here eventually.</h1></center>
+    <h1>there will be something here eventually.</h1>
+    <h2>visitors: </h2>
+    <br><h4 id="counter">0</h4>
 </body>
 </html>
