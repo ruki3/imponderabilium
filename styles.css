@@ -16,6 +16,11 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  letter-spacing: 6px;
+  text-align: center;
+}
+
 h4 {
   font-size: 50px;
   color: white;
