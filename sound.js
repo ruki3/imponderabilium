@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				setTimeout(function() {
 					plansza[0].classList.add("hider")
 				}, 500);
-				document.getElementById("autoplay").play();
+                setTimeout(function() {
+					document.body.removeChild(plansza[0]);
+				}, 1000);
 			});
     }
 });
