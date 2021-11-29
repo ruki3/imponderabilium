@@ -12,19 +12,25 @@ function cb(response) {
 }
 </script>
 <script async src="https://api.countapi.xyz/hit/imponderabilium/visits?callback=cb"></script>
+<script src="sound.js"></script>
 
 
 </head>
 
-<iframe src="reverse2.ogg" type="audio/ogg" allow="autoplay" id="audio" style="display:none"></iframe>
-<audio autoplay>
+<body>
+<audio id="autoplay" loop>
     <source src="reverse2.ogg" type="audio/ogg">
 </audio>
-
-    <h1>there will be something here eventually.</h1>
-    <h2>visitors: </h2>
-    <br><h4 id="counter">0</h4>
-    <br><h3><a href="https://discord.gg/DZqpfk3Yz2">aaaaaa</a></h3>
-
+<div class="audiostarter">
+  <h1 class="vert">play sound? well, it's not like you have a choice right now anyway...</h1>
+</div>
+  <div id="content">
+    <section>
+      <p>there will be something here eventually.</p>
+      <h3>visitors: </h3>
+      <br><h4 id="counter">0</h4>
+      <br><h3><a href="https://discord.gg/DZqpfk3Yz2">aaaaaa</a></h3>
+    </section>
+  </div>
 </body>
 </html>

@@ -1,28 +1,74 @@
 body {
   background-image: url('bg2.png');
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: local;
   background-size: cover;
   color: yellow;
+  z-index: 0;
+}
+
+p {
+  color: yellow;
+  text-align: center;
+  font-size: 32px;
 }
 
 h1 {
   text-align: center;
+  vertical-align: middle;
+  color: white;
+  letter-spacing: 8px;
+  z-index: 1;
 }
 
 h2 {
-  color: white;
-  letter-spacing: 8px;
   text-align: center;
+  z-index: 2;
 }
 
 h3 {
   letter-spacing: 6px;
   text-align: center;
+  z-index: 3;
 }
 
 h4 {
   font-size: 50px;
   color: white;
   text-align: center;
+  z-index: 4;
+}
+
+.audiostarter {
+  position: fixed;
+  object-fit: fill;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transition: opacity 1s;
+  z-index: 1337
+  line-height: 75%;
+}
+
+.audiostarter.hider {
+  position: fixed;
+  object-fit: fill;
+  display: block;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transition: opacity 1s;
+  z-index: -10
+  line-height: 75%;
+}
+
+.vert {
+  position: relative;
+  top: 50%;
 }
