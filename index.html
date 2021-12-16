@@ -1,35 +1,19 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>imponderabilium</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-function cb(response) {
-    document.getElementById('counter').innerText = response.value;
-}
-</script>
-<script async src="https://api.countapi.xyz/hit/imponderabilium/visits?callback=cb"></script>
-<script src="sound.js" type="text/javascript"></script>
-
-
-</head>
-
-<audio id="autoplay" loop>
-    <source src="reverse2.ogg" type="audio/ogg">
-</audio>
-<div class="audiostarter">
-  <h1 class="vert">play sound? well, it's not like you have a choice right now anyway...</h1>
-</div>
-  <div id="content">
-    <section>
-      <p>there will be something here eventually.</p>
-      <h3>visitors: </h3>
-      <br><h4 id="counter">0</h4>
-      <br><h3><a href="https://discord.gg/DZqpfk3Yz2">aaaaaa</a></h3>
-    </section>
+<div class="archive">
+  {% for post in site.posts %} {% assign currDate = post.date | date: "%Y" %} {%
+  if currDate != date %}
+  <h1 class="archive-year">{{ currDate }}</h1>
+  {% assign date = currDate %} {% endif %}
+  <div class="archive-item">
+    <span class="post-date archive-date fs-4"
+      >{{ post.date | date: "%B %d, %Y" }}</span
+    >
+    <a href="{{ post.url | relative_url }}" class="archive-title fs-4"
+      >{{ post.title }}</a
+    >
   </div>
-</body>
-</html>
+  {% endfor %}
+</div>
