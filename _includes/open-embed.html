@@ -1,0 +1,51 @@
+<script>
+function ogg_embed() {
+    var p = document.getElementsByTagName('p');
+    var autoplay
+    var loop
+    var controls
+    
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.ogg') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=0','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=1','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.ogg', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=0; else autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else loop=1;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else controls=0;
+                var newInnerHTML = '<audio id="autoplay"';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/ogg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+                
+    document.addEventListener("DOMContentLoaded", function() {
+	var promise = document.getElementById("autoplay").play();
+
+    if (promise !== undefined) {
+			var plansza = document.getElementsByClassName("audiostarter");
+			plansza[0].addEventListener("click", function() {
+				setTimeout(function() {
+					plansza[0].classList.add("hider");
+				}, 500);
+                setTimeout(function() {
+					document.body.removeChild(plansza[0]);
+				}, 1000);
+			});
+    }
+});
+        }
+        }
+    }
+}
+
+ogg_embed();
+
+</script>
