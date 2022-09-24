@@ -1,0 +1,72 @@
+body {
+  background: #fff;
+  font-size: 0.875em;
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(rgb(251, 220, 220, 0.15), rgb(251, 220, 220, 0.15)), url("/cinnamonbird_cairoovercoat_roxy2alt.png");
+  }
+  
+.wrapper {
+  background: none;
+  top: 0;
+  margin: 0 auto;
+  width: 880px;
+  }
+  
+.sidebar-left, .sidebar-right {
+  width: 175px;
+  }
+  
+.main {
+  width: 500px;
+  margin-left: 190px;
+  }
+  
+.sidebar-left {
+  margin-left: 0px;
+  }
+  
+.wrapper, .links a {
+  color: #4f3d46;
+  }
+  
+.box {
+  border: 3px double #333;
+  background: #fff;
+  padding: 0;
+  }
+  
+.header {
+  border: 3px double #333;
+  background: linear-gradient(rgb(251, 220, 220, 0.75), rgb(251, 220, 220, 0.75));
+  text-align: center;
+  margin-top: 15px;
+  top: 0;
+  height: auto;
+  }
+  
+.links {
+  margin-top: 1em;
+  }
+  
+.title { /*suppress title, since we're putting the title as text in the header box*/
+  display: none;
+  }
+
+.footer {
+  height: 0;
+  }
+  
+.box h1, .box h2, .box h3, .box h4 {
+  background: #facbd8;
+  margin: 0;
+  padding: 0.35em 0.25em 0.3em 0.25em;
+  text-align: center;
+  border-bottom: 3px double #333;
+  }
+  
+.inner {
+  padding: 0.25em 1em 0.3em 1em;
+  font-size: 1.075em;
+  }
