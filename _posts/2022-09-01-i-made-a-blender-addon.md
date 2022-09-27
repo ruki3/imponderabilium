@@ -12,7 +12,7 @@ Uhh, so welcome to my blog! It took me a long while, but this is going to be my 
 
 
 ## A little rant
-Have you ever wondered why people don't use actual level editors nowadays? You know, the ones with snapping to grids, easy texture alignment and all that. I mean, there are probably tons of small, dedicated communities for every existing editor out there, or maybe even some actual studios using their own tools, but it's not like they're as mainstream as they used to be. If not - don't worry, I can't blame you for that, because they're almost extinct. Anyway, I definitely did wonder, and I noticed that people stopped being caring about everything sticking out of bounds and stuff like that in their levels. They just use modular sets and all that, which to me is simply boring. I get that it's easier, but where's all the fun in that? I can also understand that you can get really creative with them in all kinds of ways, but more often than not it all comes down to the same thing - laziness. Okay, enough of that little rant of mine, let's get to the point.
+Have you ever wondered why people don't use actual level editors nowadays? You know, the ones with snapping to grids, easy texture alignment and all that. I mean, there are probably tons of small, dedicated communities for every existing editor out there, or maybe even some actual studios using their own tools, but it's not like they're as mainstream as they used to be. If not - don't worry, I can't blame you for that, because they're almost extinct. Anyway, I definitely did wonder, and I noticed that people stopped caring about everything sticking out of bounds and stuff like that in their levels. They just use modular sets and all that, which to me is simply boring. I get that it's easier, but where's all the fun in that? I can also understand that you can get really creative with them in all kinds of ways, but more often than not it all comes down to the same thing - laziness. Okay, enough of that little rant of mine, let's get to the point.
 
 
 ![hammerscreen](/assets/images/Hammer_screen.jpg)
@@ -25,7 +25,7 @@ For the past few years I've been waiting for somebody to finally make a set of t
 
 
 ![tutorials](/assets/images/blender-ytaddontutorial.png)
-<center>There were only two people that actually made good free tutorials, yet even they didn't explain some of the stuff I needed. Here's one of them. The other one disappeared from my browsing history unfortunately. :(</center>
+<center>There were only two people that actually made good free tutorials, yet even they didn't explain some of the stuff I needed. Here's one of them. The other one disappeared from my browsing history unfortunately, and I can't remember his name. :(</center>
 <br>
 
 

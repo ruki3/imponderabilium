@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUR WEBSITE</title>
+    
+    
+<link rel="icon" type="image/gif" href="https://cepheus.neocities.org/content/pixels/tumblr_m1aff0rbj41qb1380540.gif" />
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+     
+     <script>
+window.addEventListener("load", function() {
+	// store tabs variable
+	var myTabs = document.querySelectorAll("span.js > a");
+  function myTabClicks(tabClickEvent) {
+		for (var i = 0; i < myTabs.length; i++) {
+			myTabs[i].classList.remove("active");
+		}
+		var clickedTab = tabClickEvent.currentTarget;
+		clickedTab.classList.add("active");
+		tabClickEvent.preventDefault();
+		var myContentPanes = document.querySelectorAll(".tabboi");
+		for (i = 0; i < myContentPanes.length; i++) {
+			myContentPanes[i].classList.remove("active");
+		}
+		var anchorReference = tabClickEvent.target;
+		var activePaneId = anchorReference.getAttribute("href");
+		var activePane = document.querySelector(activePaneId);
+		activePane.classList.add("active");
+	}
+	for (i = 0; i < myTabs.length; i++) {
+		myTabs[i].addEventListener("click", myTabClicks)
+	}
+});
+
+</script>
+  
+  <style>
+  body, html, a, a:hover, textarea { cursor:url("https://cepheus.neocities.org/img/cbasic.png"), crosshair;}
+  
+  body{
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    background: url('https://cepheus.neocities.org/vessel/wind0/_s_a12b12c1E6d1E6e0f0g64hE9E1F2BFBBD8i44j0k43l1F4m1F4.png');
+    margin:0;
+font-family: 'Cousine', monospace;
+    padding:0;}
+    
+    #bar{
+      display:none;
+  width:100%;
+  box-shadow: 0px 0px 10px #acacac;
+  background: white;
+  border-bottom: 1px solid #2f1e6e;
+  position:fixed;
+    top:0;
+    padding: 0;
+    left: 0;
+    margin: 0;
+    width:100%;
+    z-index:100;
+    height: 20px;
+    padding-left: 3px;
+    line-height:20px;
+    font-size:13px;}
+    
+    #container{
+      background: #f2f0f7;
+      position:relative;
+      width: 800px;
+      overflow: auto;
+      margin: 0 auto;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      border-radius: 5px;
+      padding: 0;
+      border: 1px solid #000;
+      box-shadow: 0px 2px 5px 0px #413191;
+    }
+    
+    #blog{
+      float:right;
+    width: 535px;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right:-40px;
+    }
+    
+    .b{
+      width: 520px;
+      margin: 0 auto;
+      box-shadow: 0px 2px 5px 0px #f5836c;
+    border-radius: 5px;
+    background:#f7f5fa;
+    border: 1px solid #2f1e6e;
+ webkit-box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #413191;
+    -moz-box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #413191;
+    box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #413191;
+    margin-bottom: 30px;}
+    
+    .bimg{
+      max-width: 520px;
+      margin: 0 auto;
+      margin-left: -6px;
+      margin-top: -6px;
+      border-radius:0;
+      border-bottom: 1px solid #2f1e6e;}
+    
+      
+    .b h1{
+      width: 100%;
+      height: 30px;
+      line-height: 32px;
+      text-align:left;
+    text-shadow: 1px 1px 1px #aaa0de;
+      color:#000;
+      border-radius: 5px 5px 0px 0px;
+      border-bottom: 1px solid #2f1e6e;
+      margin: 0;
+ background-image: url('https://cepheus.neocities.org/vessel/wind0/_s_a13b13c1EEd1EEe0f0g64hFFFFFFF5E9F8i44j0k43l1F4m1F4.png');
+      padding: 0;
+      margin-top: -5px;
+      font-size: 18px;}
+    
+    .b h2{
+      width: 100%;
+      height: 30px;
+      line-height: 32px;
+      text-align:left;
+    text-shadow: 1px 1px 1px #aaa0de;
+      color:#000;
+      border-radius: 5px 5px 0px 0px;
+      border-bottom: 1px solid #2f1e6e;
+      margin: 0;
+      margin-top: -5px;
+ background-image: url('https://cepheus.neocities.org/vessel/wind0/_s_a13b13c1EEd1EEe0f0g64hFFFFFFF5E9F8i44j0k43l1F4m1F4.png');
+      padding: 0;
+      font-size: 18px;}
+      
+      .pad{
+        padding-left: 6px;}
+    
+    em, i, s{
+      color:#696191;}
+    
+    strong, b{
+      color:#4a3c91;
+    }
+    
+    u{
+      text-decoration: none;
+      border-bottom: 1px solid #4a3c91;
+    }
+    
+    .text{
+      color:#000;
+      text-align:left;
+    margin: 0 auto;
+    padding: 6px;
+    line-height: 15px;
+    font-size: 11pt;}
+    
+    .timg{
+    border: 1px solid #2f1e6e;
+    margin: 5px auto;
+    border-radius: 5px;}
+    
+    blockquote{
+    color:#000;
+    border: 1px solid #2f1e6e;
+    border-radius: 5px;
+    padding: 6px;
+    background: url(https://cepheus.neocities.org/vessel/wind0/_s_a13b13c1EEd1EEe0f0g64hFFFFFFF5E9F8i44j0k43l1F4m1F4.png);
+    quotes: "\201C""\201D""\2018""\2019";
+    text-shadow: 1px 1px 1px #aaa0de;
+    webkit-box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #aaa0de;
+    -moz-box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #aaa0de;
+    box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #aaa0de;}
+    
+    blockquote:before {
+  content: open-quote;
+  font-size: 40px;
+  line-height: 0px;
+  margin-right: 4px;
+  vertical-align: -0.4em;
+}
+    
+    .date{
+width: 100%;
+ height: 30px;
+ border-top: 1px solid #2f1e6e;
+ line-height: 30px;
+ background-image: url('https://cepheus.neocities.org/vessel/wind0/_s_a13b13c1EEd1EEe0f0g64hFFFFFFF5E9F8i44j0k43l1F4m1F4.png');
+ text-align:right; 
+ font-size: 14px;
+ margin:0;
+ border-radius:0px 0px 5px 5px;
+ text-transform: uppercase;
+ font-weight:bold;
+ color:#000;
+ padding:0;
+ text-shadow: 1px 1px 1px #aaa0de;
+    }
+    
+    .d{
+      padding-right: 6px;}
+      
+      .o{
+ line-height: 30px;
+ font-size: 8pt;
+ background-image: url('https://cepheus.neocities.org/vessel/wind0/_s_a13b13c1EEd1EEe0f0g64hFFFFFFF5E9F8i44j0k43l1F4m1F4.png');
+ text-align:center; 
+ font-size: 11px;
+ margin:0;
+ border-radius:5px 5px 5px 5px;
+ text-transform: uppercase;
+ font-weight:bold;
+ color:#000;
+ padding:0;
+ text-shadow: 1px 1px 1px #aaa0de;
+    }
+    
+  .sideimg{
+  border: 1px solid #2f1e6e;
+  border-radius: 5px;
+  margin:0 auto;
+  width: 160px;
+  height: 100px;
+    background: url(https://picsum.photos/160/100);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  }
+    
+  #side{
+    float: left;}
+    
+  .sidebox{
+    box-shadow: 0px 2px 5px 0px #f5836c;
+    text-align:center;
+    width: 180px;
+    background:#f7f5fa;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    
+    border: 1px solid #2f1e6e;
+ webkit-box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #413191;
+    -moz-box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #413191;
+    box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #413191;}
+    
+  .sidebox h1{
+    font-weight:normal;
+ color:#897ebf;
+ text-shadow: 1px 1px 1px #ddd;
+ text-align:center;
+ font-size: 20px;
+ line-height: 30px;
+ margin:0;
+ padding:0;
+  }
+  
+  .t{
+    color:#000;
+    border: 1px solid #2f1e6e;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 130px;
+    padding: 6px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px #aaa0de;
+    line-height: 13px;
+    font-size: 8pt;
+    webkit-box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #aaa0de;
+    -moz-box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #aaa0de;
+    box-shadow:inset -1px -1px 2px 0px #eddbda, inset 2px 2px 3px -1px #f5ebeb, 0px 2px 5px 0px #aaa0de;}
+    
+    .f{
+width: 100%;
+ height: 30px;
+ line-height: 30px;
+ background: #e5e1f0;
+ border-top: 2px solid #e81c44;
+ text-align:right; 
+ font-size: 11px;
+ margin:0;
+    border-radius: 5px;
+ text-transform: uppercase;
+ font-weight:bold;
+ color:#e81c44;
+ padding:0;}  
+ 
+.ftext{
+  padding-right: 7px;}
+
+
+.ctrl{
+width: 100%;
+ height: 30px;
+ line-height: 20px;
+ background: #e5e1f0;
+    border-radius: 5px 5px 0px 0px;
+ border-bottom: 1px solid #2f1e6e;
+ webkit-box-shadow:inset -1px -1px 2.5px 0px #c49d9b;
+    -moz-box-shadow:inset -1px -1px 2.5px 0px #c49d9b;
+    box-shadow:inset -1px -1px 2.5px 0px #c49d9b;}
+ 
+.h{
+ text-align:left; 
+ font-size: 11px;
+ float:right;
+ margin:0;
+ border-radius:5px;
+ text-transform: uppercase;
+ font-weight:bold;
+ color:#000;
+ margin-bottom:-26px;
+  text-decoration:none;
+ margin-top: 6px;
+ margin-left: 7px;
+ float: left;
+ padding:0;
+ text-shadow: 1px 1px 1px #aaa0de;
+}
+    
+    .h a, .h a:hover{
+      color:#000;
+      letter-spacing: 0;
+      margin: 0;
+      padding: 0;
+      text-decoration:none;}
+
+.ctrls{
+ padding-top: 10px;
+ text-align:right;
+ padding-right: 10px;
+ padding-bottom: 5px;
+ float:right;
+}
+
+.ctrl1 a{
+ width: 9px;
+ height: 9px;
+ display:inline-block;
+ text-decoration: none;
+ border-radius: 9px;
+ border: 1px solid #000;
+ background:#e88987;
+ box-shadow: inset 4px 2px 4px -3px #fff, 1px 1px 1px #aaa0de;
+}
+
+.ctrl2 a{
+ width: 9px;
+ height: 9px;
+ display:inline-block;
+ text-decoration: none;
+ border-radius: 9px;
+ border: 1px solid #000;
+ box-shadow: inset 4px 2px 4px -3px #fff, 1px 1px 1px #aaa0de;
+ background:#f7db5e;
+}
+
+.ctrl3 a{
+ 
+ width: 9px;
+ height: 9px;
+ display:inline-block;
+ text-decoration: none;
+ border-radius: 9px;
+ border: 1px solid #000;
+ box-shadow: inset 4px 2px 4px -3px #fff, 1px 1px 1px #aaa0de;
+ background:#c5f0af;
+}
+
+.ctrl1 a:hover{
+  background: #de716f;}
+
+.ctrl2 a:hover{
+  background: #dbb458;}
+  
+.ctrl3 a:Hover{
+  background: #97c77f;}
+  
+  :-moz-selection { 
+  color: white;
+  background: #4827cc;
+  text-shadow: 0px 0px 2px white;
+}
+
+::selection {
+  color: white;
+  background: #4827cc;
+  text-shadow: 0px 0px 2px white;
+}
+
+ul{
+  list-style-type:square;
+  list-style-image: url('https://cepheus.neocities.org/content/pixels/tumblr_m1af8iZYZA1qb1380540.gif');}
+  
+  img{
+  opacity: 0.7;
+  -moz-transition:.5s;
+-webkit-transition:.5s;
+transition:.5s;}
+
+img:hover{
+  opacity: 1;
+  -moz-transition:.5s;
+-webkit-transition:.5s;
+transition:.5s;}
+
+ ::-webkit-scrollbar {
+    background-color: #fff;
+    height: 8px;
+    width: 12px;
+    border: 4px solid white;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background:transparent;
+    
+}
+
+::-webkit-scrollbar-thumb {
+  
+    border-radius: 8px;
+    background-color: #403cb5;
+    height:auto;
+    border: 4px solid #fff;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+} 
+
+.footer{
+  width: 100%;
+ height: 30px;
+ line-height: 30px;
+ background: #e5e1f0;
+    border-radius: 0px 0px 5px 5px;
+ border-top: 1px solid #2f1e6e;
+ webkit-box-shadow:inset -1px -1px 2.5px 0px #c49d9b;
+    -moz-box-shadow:inset -1px -1px 2.5px 0px #c49d9b;
+    box-shadow:inset -1px -1px 2.5px 0px #c49d9b;
+ text-align:center; 
+ font-size: 11px;
+ margin:0;
+ text-transform: uppercase;
+ font-weight:bold;
+ color:#000;
+ padding:0;
+ float:right;
+ text-shadow: 1px 1px 1px #aaa0de;}
+ 
+ .nav{
+   text-align:center;}
+ 
+ .nav a{
+   display:block;
+   text-decoration:none;
+   height: 25px;
+   line-height: 27px;
+ color:#000;
+   font-size: 18px;
+ text-shadow: 1px 1px 2px #aaa0de;
+   border-bottom: 1px solid white;
+  -moz-transition:.5s;
+-webkit-transition:.5s;
+transition:.5s;
+ background-color: #e5e1f0;
+ }
+ 
+ .nav a:hover{
+  -moz-transition:.5s;
+-webkit-transition:.5s;
+transition:.5s;
+   letter-spacing: 2px;
+   text-shadow: 0px 0px 2px white, 0px 0px 3px white, 0px 0px 5px white; 0px 0px 7px white;}
+ 
+ .nav a.first{
+   border-radius: 5px 5px 0px 0px;
+ }
+ 
+ .nav a.last{
+   border-radius: 0px 0px 5px 5px;
+   border-bottom: none;
+ }
+ 
+ a{ text-decoration: underline solid #000;
+ color:black;}
+    
+  a:hover{-moz-transition:.5s;
+-webkit-transition:.5s;
+transition:.5s;
+   letter-spacing: 1px;
+   text-shadow: 0px 0px 2px white, 0px 0px 3px white, 0px 0px 5px white; 0px 0px 7px white;}  
+    
+    
+.tab-content {
+  
+}
+.tab-content .tabboi {
+  display: none;
+}
+.tab-content .tabboi.active {
+  display: block;
+}
+.tab-content > .active {
+  display: block;
+}
+    
+    A img{text-decoration:none; border-bottom: 0px solid #666;}
+    
+    .b iframe{max-width: 100%; margin: 0 auto;}
+   
+  </style>
+  
+    <style>
+@media only screen and (max-width: 750px) {
+
+#container{
+ width: 95%; 
+  height: auto;
+ margin: 0 auto;
+ padding:0;
+ margin-top: 5%;
+ margin-bottom: 5%;
+}
+
+#blog{
+  width: auto;
+  margin:0 auto;}
+  
+  .bimg1, .bimg2{width: auto;}
+  
+.b{
+ width: 95%;
+ margin: 5px auto;
+ margin-bottom: 20px;
+}
+
+.h{font-size:20px;}
+
+#side{
+  width: 100%;
+  margin: 5px auto;}
+  
+  .sidebox{ width: 95%;
+  margin:0 auto;
+  margin-bottom: 20px;}
+  
+  .mobhide{display:none;}
+  
+  img{max-width: 100%;}
+  
+  .t{width: 90%;}
+  
+  .b h1{
+    height: auto;}
+  
+  .sideimg{
+  margin:0 auto;
+  width: 90%;
+    background-position: -300px -50px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  }
+
+  .footer{
+    overflow: hidden;
+  height: auto;}
+  
+  
+  .t{width: 90%; font-size: 16px; line-height: 15px;}
+  
+  .date, .o{
+    font-size: 14px;}
+  
+  iframe{max-width: 100%;}
+  
+ .b iframe{max-width: 100%; margin: 0 auto;}
+  
+  .b img{
+    max-width: 100%;
+    margin: 0 auto;}
+  
+  img{ max-with: 100%;}
+  
+  .a img, img{ border:none; text-decoration: none;}
+  
+}
+  </style>
+    
+  </head>
+  <body>
+    
+    <div id="bar"><img src="https://cepheus.neocities.org/content/pixels/tumblr_m1af8iZYZA1qb1380540.gif"></div>
+    
+    
+    <div id="container">
+    
+      <div class="ctrl">
+        <span class="h"><A href="#">// YOUR WEBSITE NAME</a></span>
+            <div class="ctrls">
+            <span class="ctrl1"><a href="#" >&nbsp;</a></span>
+            <span class="ctrl2"><a href="#" >&nbsp;</a></span>
+            <span class="ctrl3"><a href="#" >&nbsp;</a></span>
+          
+          </div>
+          </div>
+          
+          
+    <div id="blog">
+     
+       <div class="tab-content">   
+         <div id="tab-1" class="tabboi active">
+         
+      <div class="b">
+      <img src="https://picsum.photos/520/200">
+      <h1><span class="pad">POST TITLE</span></h1>
+        <div class="text"><strong>Lorem</strong> <em>ipsum</em> <u>dolor</u> <a href="#">sit</a> <s>amet</s>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </blockquote>
+        </div>
+        <div class="date"><span class="d">DATE</span></div>
+      </div>
+      
+      <div class="b">
+      <img src="https://picsum.photos/520/200">
+      <h1><span class="pad">POST TITLE</span></h1>
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </div>
+        <div class="date"><span class="d">DATE</span></div>
+      </div>
+      
+      <div class="b">
+      <div class="o">
+      Older Posts | Newer Posts</div></div>
+      
+          </div>
+      
+    <div id="tab-2" class="tabboi">
+    
+     <div class="b">
+       <img src="https://picsum.photos/520/200">
+      <h2><span class="pad">Tab 2</span></h2>
+        <div class="text">Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. 
+      <br><br>
+        
+          <strong>List:</strong><br>
+         
+<ul>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+</ul>
+        </div>
+        <div class="date"><span class="d"></span></div>
+      </div>
+    
+          </div>
+          
+          <div id="tab-3" class="tabboi">
+    
+     <div class="b">
+      <img src="https://picsum.photos/520/200">
+      <h2><span class="pad">Tab 3</span></h2>
+       <div class="text">Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. Lorem ipsum something something. 
+      <br><br>
+        
+          <strong>List:</strong><br>
+         
+<ul>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+</ul>
+        </div>
+        <div class="date"><span class="d"></span></div>
+      
+          </div>
+          
+          </div>
+    
+    </div>
+      
+    </div>
+          
+    <div id="side">    
+      <div class="sidebox">
+        <div class="sideimg">
+        </div>
+      <h1>My journal</h1>
+      <div class="t">
+      Hi & welcome to my blog. This box is a great place for a description of your website!
+      </div>
+      </div>
+      
+      
+      <div class="sidebox">
+        
+        <div class="nav">
+        <span class="js"><a href="#tab-1" class="first">Tab 1</a>
+        <a href="#tab-2">Tab 2</a>
+        <a href="#tab-3">Tab 3</a></span>
+        <a href="#" class="last">Refresh</a>
+        
+        </div>
+      
+      </div>
+      
+      
+      <div class="sidebox">
+        <h1 style="margin-top: 6px;">Site Credits</h1>
+       <div class="t">
+       Pixels: <a href="https://pixel-soup.tumblr.com/" target="_blank">X</a><br>
+        Patterns: <a href="https://www.patterncooler.com/" target="_blank">X</a>
+        </div>
+      
+      </div>
+      
+      
+      
+      
+      
+      
+    </div>
+          
+          
+      <div class="footer">&copy; Your Site 20XX. Designed with <a href="http://cepheus.neocities.org/" target="_blank">&hearts;</a> //</div>
+        </div>
+    
+  </body>
+</html>

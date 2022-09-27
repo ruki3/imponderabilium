@@ -1,0 +1,12 @@
+ul.heartbullets {
+  list-style: none;
+}
+
+ul.heartbullets li::before {
+  /* look up 'css code symbols' for more symbols */
+  content: "\02765";
+}
+
+ul.pixelbullets {
+  list-style-image: url("https://sadgrl.online/images/pixels/new.gif");
+}
