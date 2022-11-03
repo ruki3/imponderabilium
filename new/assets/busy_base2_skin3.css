@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+body {
+  background: linear-gradient(rgb(0,0,0,0), rgb(255,255,255,1)), url("/img/pexels-splash-of-rain-7321_downsized_crop2.jpg") no-repeat;
+  background-attachment: fixed;
+  color: #020202;
+  font-family: sans-serif;
+  font-size: 0.85em;
+  }
+  
+a {
+  color: #4a5859;
+  }
+  
+.title {
+  font-family: "Fjalla One";
+  font-size:1.2em;
+  }
+  
+.wrapper {
+  margin-top:30px;
+  width: 1200px;
+  }
+  
+/*Changing the size of the gap between boxes.*/
+.sidebar-img, .footer, .title, .links, .box {
+  margin-top: 15px;
+  }
+  
+.main {
+  column-gap: 15px;
+  }
+  
+.main-wrapper {
+  margin-left: 215px;
+  }
+  
+.footer {
+  margin-bottom: 15px;
+  }
+  
+.links {
+  top: 0;
+  margin-top:0;
+  }
+  
+.box, .sidebar-image, .sidebar-image img {
+  border: 0;
+  border-radius: 0.5em;
+  background: #ccd5d0;
+  }
+  
+.sidebar .box, .sidebar-image {
+  background: #a5beb8;
+  border: #798886 1px solid;
+  }
+  
+.box {
+  border: #8d9896 1px solid;
+  }
+  
+.inner {
+  overflow: hidden;
+  }
+  
+/*Replace special spacer characters with different ones.*/
+.links li:before {
+  content: "『"
+  }
+.links li:after, .links .last:after {
+  content: "』";
+  }
+  
+/*Slightly increase nav link spacing.*/
+.links li {
+  margin: 0 0.275em;
+  }
+  
+  
+/*Reapply mobile CSS, since we changed the widths.*/
+@media (orientation: portrait) {
+  .wrapper {
+    width: 100%;
+    }
+  
+  .main-wrapper, .sidebar, .footer {
+    margin: 0 auto;
+    width: 90%;
+    }
+  
+  .sidebar {
+    float: none;
+    display: block;
+    }
+
+  .sidebar-image {
+    margin: 0 auto;
+    width: 33%;
+    margin-top:25px;
+    }
+
+  .sidebar .sidebar-image img {
+    width: 100%;
+    }
+    
+  .footer {
+    margin-bottom: 25px;
+    }
+  
+  }

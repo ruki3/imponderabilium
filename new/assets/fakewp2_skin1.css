@@ -1,0 +1,72 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #422e20;
+  font-size: 1em;
+  color: white;
+  font-family: "Times New Roman", serif;
+  }
+  
+h1, h2, h3, h4, h5, .link {
+  font-family: "Bookman Oldstyle", serif;
+  }
+  
+.wrapper {
+  background: none;
+  width: 100%;
+  }
+  
+.wrapper-2 {
+  margin: 0 auto;
+  }
+  
+.header, .footer {
+  background: url("/img/pond.gif");  
+  background-size: cover;
+  border-color: #22aab8;
+  margin: 0;
+  }
+
+  
+.footer {
+  border: 0;
+  }
+
+.sidebar-left, .sidebar-right {
+  width: 16%;
+  }
+  
+.main {
+  width: 64%;
+  margin-left: 18%;
+  }
+  
+.sidebar-right {
+  margin-left: 1%;
+  }
+  
+.sidebar-left {
+  margin-left: 1%;
+  }
+  
+.box {
+  border-top: 7px solid #22aab8;
+  border-bottom: 7px solid #22aab8;
+  padding: 0em 0em 0em 0em;
+  margin: 0.75em 0em 1.25em 0em;
+  border-radius: 5px 5px 0px 0px;
+  background: #fff;
+  color: #12282f;
+  }
+  
+.inner {
+  padding: 0 10px 0 10px;
+  }
+
+  
+.box h1, .box h2, .box h3, .box h4, .box h5, .box h6 {
+  background:#22aab8;
+  padding: 0.25em 0.6em 0.15em 0.6em;
+  margin-top: 0px;
+  margin-bottom: 0;
+  }

@@ -1,0 +1,273 @@
+html,body,div,span,iframe,h1,h2,h3,h4,p,pre,del,em,img,b,i,dl,dt,dd,ol,ul,li,form,table,tbody,tr,th,td,article,aside,footer,header,nav,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;box-sizing:border-box}
+article,aside,footer,header,nav,section{display:block}
+body{line-height:1;overflow-wrap:break-word;word-wrap:break-word}
+input,textarea,select{font-family:inherit;font-size:inherit;color:inherit;vertical-align:middle;box-sizing:border-box}
+a{margin:0;padding:0;text-decoration:none;outline:none;font-size:100%;vertical-align:baseline;background:transparent}
+a img{border-style:none}
+ul,li{list-style-type:none}
+.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}
+
+/* ===================================
+背景,文字,リンク設定
+=================================== */
+
+html{
+font-size:62.5%
+}
+body{
+background:#fff;/* 背景色 */
+color:#00000;/* 文字色 */
+font-size:1.3em;/* 文字の大きさ */
+font-family:'Segoe UI','游ゴシック Medium','Yu Gothic Medium','游ゴシック体',YuGothic,'Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif;
+letter-spacing:.1em;
+line-height:1.5;
+padding:20px 20px 80px;
+text-align:center
+}
+/*  リンク
+------------------------------ */
+a{
+color:#8c8673
+}
+#contents a:not(.bg-none){
+border-bottom:1px dashed #ffb9c5;
+color:#ffb9c5
+}
+#contents a:not(.bg-none):hover{
+border-bottom:1px dashed #8c8673
+}
+
+/* ===================================
+基本
+=================================== */
+
+#wrapper{
+margin:0 auto;
+width:600px /* 全体の幅・大きさはここで変更 */
+}
+header{
+padding:10px
+}
+#contents{
+text-align:left
+}
+footer{
+padding:10px 0
+}
+
+/* ===================================
+メニュー
+=================================== */
+
+#menu{
+display:block
+}
+nav li a,nav li span{
+background:#f0b400;
+border:2px solid #000000;
+border-radius: 10px;
+color:#000000;
+display:block;
+font-weight:700;
+padding:5px 0px;
+position:relative;
+margin:10px 0 0
+}
+nav li a:hover,nav li span:hover{
+background:#6ac8d9;
+color:#5e4e47
+}
+nav li img{
+margin:0 5px;
+vertical-align:middle
+}
+.sub-menu{
+display:none;
+margin:0;
+overflow:hidden
+}
+.sub-menu li a{
+background:#b8bfbd
+}
+.sub-menu li a:hover{
+background:#6ac8d9
+}
+/*  メニューの「>」
+------------------------------ */
+nav li span:after{
+border-top:3px solid #8c8673; /* 色 */
+border-right:3px solid #8c8673; /* 色 */
+content:"";
+display:block;
+margin-top:-5px;
+position:absolute;
+height:5px;width:5px;
+top:50%;right:10px;
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+transform:rotate(45deg);
+transition:.5s
+}
+nav li span.open:after{
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+transform:rotate(135deg)
+}
+
+/* ===================================
+ページ上部へのリンク
+=================================== */
+
+/*  位置はscroll.jsで設定 
+------------------------------ */
+#pagetop{
+background:rgba(255,185,197,.6);/* 背景 */
+color:#fff;/* 色 */
+height:60px;width:60px; /* 大きさ */
+border-radius:30px;
+box-sizing:border-box;
+display:block;
+line-height:22px;
+padding-top:30px;
+position:fixed;
+text-align:center;
+z-index:10
+}
+#pagetop:before{
+content:'\25B2';
+font-size:20px;
+position:absolute;
+width:100%;
+left:0;top:10px
+}
+#pagetop:hover{
+background:rgba(255,185,197,.8)
+}
+
+/* ===================================
+見出し、枠、線
+=================================== */
+
+h1{
+color:#fff;
+font-size:1.6em;
+margin:0 0 .1em
+}
+h2{
+background:url(image/i01.gif) no-repeat 0 50%;
+border-bottom:1px solid;
+font-size:1.1em;
+font-weight:bold;
+margin:1em 0;
+padding-left:15px
+}
+h2.bl{
+background:url(image/i02.gif) no-repeat 0 50%
+}
+h3{
+background:#ffd2da;
+border-radius:6px;
+font-size:1em;
+margin:10px 0 20px;
+padding:5px;
+position:relative
+}
+h3::after{
+border:8px solid transparent;
+border-top:8px solid #ffd2da;
+content:'';
+position:absolute;
+height:0;width:0;
+top:100%;left:30px
+
+}
+dt{
+color:#868c73;
+clear:both;
+font-weight:700;
+float:left;
+margin:0 0 5px;
+width:160px
+}
+dd{
+border-bottom:1px solid;
+margin:0 0 5px 170px
+}
+em{
+font-style:normal;
+font-weight:700
+}
+input,textarea{
+background:#ffd2da;
+border:none;
+letter-spacing:.1em;
+line-height:1.5;
+margin:3px 0;
+width:80%
+}
+textarea{
+height:50px
+}
+hr{
+border:0;
+border-top:1px solid #ccc;
+display:block;
+margin:1em 0;
+padding:0;
+height:1px
+}
+.marker{
+background:#ffd2da;
+background:-webkit-linear-gradient(rgba(255,209,218,0) 70%, #ffd2da 0%);
+background:linear-gradient(rgba(255,209,218,0) 70%, #ffd2da 0%)
+}
+.dcline{
+border-left:3px solid #ffd2da;
+margin:5px 0;
+padding:3px
+}
+.textbox{
+border:1px solid;
+text-align:center
+}
+.box a{
+display:block
+}
+.box a:hover{
+background:#c8dddd
+}
+.header2{
+margin:1em 1;
+}
+.title{
+color:#fff;
+font-size:1.2em;
+font-weight:700;
+letter-spacing:4px;
+margin:1em 0;
+text-align:right
+}
+.txt{
+border-left:1px solid;
+margin:1em;
+padding:0 0 0 1em
+}
+.frame{
+background:#ffd2da;
+border-radius:3px;
+box-shadow:4px 4px 0 #e5e5e5;
+padding:6px
+}
+
+/* ===================================
+スマホ、タブレット用
+横幅600pxで切り替え
+=================================== */
+
+@media screen and (max-width: 600px){
+body{font-size:1.5em}
+#wrapper{width:100%}
+dt{float:none;clear:none;width:auto}
+dd{margin-left:20px}
+img{max-width:100%;height:auto}/* 画像の縮小表示 */
+}
