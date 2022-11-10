@@ -16,7 +16,7 @@ bl_info = {
     "author" : "pomidorek",
     "description" : "",
     "blender" : (2, 80, 0),
-    "version" : (1, 0, 0),
+    "version" : (1, 1, 0),
     "location" : "View3D",
     "warning" : "",
     "category" : "View3D"
@@ -65,6 +65,15 @@ class BH_AddonPreferences(AddonPreferences):
             row.label(text=km_item.name)
             row.prop(km_item, 'type', text='', full_event=True)
 
+class BH_CursorSnapSettings(bpy.types.PropertyGroup):
+    dropdown : EnumProperty(
+        name= "Axis",
+        default= "1",
+        description= "Choose an axis to snap to.",
+        items= [("1", "X", ""),
+            ("2", "Y", ""),
+            ("3", "Z", ""),]
+    )
 
 class BH_GridSettings(bpy.types.PropertyGroup):
     dropdown : EnumProperty(
@@ -245,6 +254,33 @@ class BH_TriplanarUnwrap(bpy.types.Operator):
             map_objectmode(context)
         return {'FINISHED'}
 
+class BH_CursorSnap(bpy.types.Operator):
+    """Snap selection to cursor on one axis"""
+    bl_idname = "bh.cursor_snap"
+    bl_label = "Snap"
+    bl_options = {"REGISTER", "UNDO"}
+
+    def execute(self, context):
+        pivot_point = context.scene.tool_settings.transform_pivot_point
+        option = context.scene.cursor_settings
+
+        bpy.context.scene.tool_settings.transform_pivot_point = 'CURSOR'
+        if option.dropdown == "1":
+           bpy.ops.transform.resize(value=(0, 1, 1))
+        elif option.dropdown == "2":
+           bpy.ops.transform.resize(value=(1, 0, 1))
+        elif option.dropdown == "3":
+           bpy.ops.transform.resize(value=(1, 1, 0))
+
+        bpy.context.scene.tool_settings.transform_pivot_point = pivot_point
+
+        return {"FINISHED"}
+
+    def invoke(self, context, event):
+        self.execute(context)
+
+        return {"FINISHED"}
+
 class BH_GridScale(bpy.types.Operator):
     """Change the grid scale"""
     bl_idname = "bh.grid_scale"
@@ -347,6 +383,7 @@ class BH_GridPanel(bpy.types.Panel):
     def draw(self, context):
         layout = self.layout
         grid_s = context.scene.grid_settings
+        cursor_s = context.scene.cursor_settings
         uv_s = context.scene.triplanar_settings_props
 
         
@@ -355,6 +392,14 @@ class BH_GridPanel(bpy.types.Panel):
         row = col.row()
         row.prop(grid_s, "dropdown")
         row.operator("bh.grid_scale")
+
+        layout.separator()
+
+        col = layout.column(align=True)
+        col.label(text="-Cursor Snapping-")
+        row = col.row()
+        row.prop(cursor_s, "dropdown")
+        row.operator("bh.cursor_snap")
 
         layout.separator()
 
@@ -373,13 +418,14 @@ class BH_GridPanel(bpy.types.Panel):
 
 
 addon_keymaps = []
-classes = (BH_GridSettings, BH_GridScale, BH_GridScaleUp, BH_GridScaleDown, BH_AddonPreferences, BH_GridPanel, BH_TriplanarSettings, BH_TriplanarUnwrap)
+classes = (BH_GridSettings, BH_GridScale, BH_GridScaleUp, BH_GridScaleDown, BH_AddonPreferences, BH_GridPanel, BH_CursorSnapSettings, BH_CursorSnap, BH_TriplanarSettings, BH_TriplanarUnwrap)
 
 def register():
     for i in classes:
         bpy.utils.register_class(i)
 
     bpy.types.Scene.grid_settings = bpy.props.PointerProperty(type=BH_GridSettings)
+    bpy.types.Scene.cursor_settings = bpy.props.PointerProperty(type=BH_CursorSnapSettings)
     bpy.types.Scene.triplanar_settings_props = bpy.props.PointerProperty(type=BH_TriplanarSettings)
 
     kc = bpy.context.window_manager.keyconfigs.addon
@@ -399,6 +445,7 @@ def register():
 def unregister():
     del bpy.types.Scene.grid_settings
     del bpy.types.Scene.triplanar_settings_props
+    del bpy.types.Scene.cursor_settings
     for i in classes:
         bpy.utils.unregister_class(i)
 
