@@ -29,7 +29,7 @@ For the past few years I've been waiting for somebody to finally make a set of t
 <br>
 
 
-## A personal(?) hell called Blender addon development
+## a retard at work
 So. You'd probably think that it's just regular python, it can't be that hard, right? Fuck no, you also have to learn and look the blender stuff - class registration, unregistration, types, keymaps, context and all that weird stuff. It all quickly became way too much for me to get a hold of properly. I can already imagine anyone who's reading this thinking - "B-but you're just dumb, it's all obvious! How can you not understand such simple things!?" - I agree, I might be actually smoothbrained, but I seriously think that the whole thing is incredibly convoluted, messy and hard to understand. Even the wiki doesn't provide enough documentation, and comparing it to Godot's - it's like night and day, Blender's being shit of course. Anyway, I thought of an actually genious idea - take somebody else's addon, open the files and see how it's done. Sure, it helped a bit, but still wasn't enough.
 
 ![codesnippet](/assets/images/addon-code-snippet.png)
@@ -45,7 +45,7 @@ Fortunately, this is the point where other people's work comes in to save the da
 <br>
 
 
-## Out of the dark
+## At the finish line! Or not?
 So, I've got the addon working, what now? Well, it's still not complete. I'd love to have a some kind of panel with all of my textures inside, with previews and all that, but I already know that it's going to be a total pain in the ass to code, so I'm just going to take a break. It's more than enough for me with its current features, so there's no point to improve it further, at least for now. Now, I'm obviously going to release it for any of you reading this thing, whether you made it through entirely or not, I don't really care. One thing though - not all of the code is mine, actually. I found some of it on github under the GPL license, so I think that me releasing it as my own version at the very least is fine. I'm going to put a link to it here, or just host it on the website - I don't really have a clue on how limited I am on Github Pages. Install it as is, please don't zip it or anything because it won't work if you do so. Don't pay too much attention towards the name, too. (*^.^*)
 
 <center><a href="/assets/downloads/brenchtroom.py">Download the addon! (updated nov 10 2022)</a></center>
