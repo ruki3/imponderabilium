@@ -33,7 +33,7 @@ future: true
 baseurl: ""
 
 # global author information
-author: ruki3
+author: yuuki
 
 # URL to a site-wide logo (e.g., /assets/your-company-logo.png)
 logo: 
@@ -45,8 +45,7 @@ permalink: /:year/:month/:day/:title/
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  twitter: rukiii666
-  discord: https://discord.gg/bjf5PQsYH5
+  twitter: yuukii_666
   youtube: channel/UCEfEPECAgGK_QboSxA-qKGA
 
 plugins:
